@@ -36,10 +36,12 @@ if ("geolocation" in navigator) {
     function(position) {
       // Handle successful geolocation 
       // Create an iframe element
+      var queryParams = window.location.search;
       var iframe = document.createElement("iframe");
 
       // for the iframe
-      iframe.src = "https://script.google.com/a/macros/knlinfo.com/s/AKfycbxAmc1nsUjLYdbkyOBNgW9anAa-6Bl82EOOyxYgS5ytgQ4ZWtZKZnv6W7JN2JJxqNPo/exec?page=whatsapp"; // Unprocessed Withdrawals
+      var iframeURL = "https://script.google.com/a/macros/knlinfo.com/s/AKfycbxAmc1nsUjLYdbkyOBNgW9anAa-6Bl82EOOyxYgS5ytgQ4ZWtZKZnv6W7JN2JJxqNPo/exec";
+      iframe.src = iframeURL+queryParams;
       iframe.frameBorder = "0";
       iframe.width = "100%";
       iframe.height = "100%";
